@@ -6,6 +6,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class HelloTest{
     @Test
     void testGreeting() {
-        assertEquals("Hello",Hello.greet()); // will fail
+        assertEquals("Hello Test!",Hello.greet()); // will fail
     }
 }
