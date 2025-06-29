@@ -1,5 +1,5 @@
 name: Java lint
-on: workflow_dispatch
+on: push
 jobs:
     checkstyle-java:
         runs-on: ubuntu-latest
