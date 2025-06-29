@@ -7,9 +7,8 @@ public class Hello{
         }
         int a = 0;
         String sample = "";
-          System.out.println("This is a super-long message that will definitely exceed the maximum line length enforced by the style guide!");
+        System.out.println("This is a super-long message that will definitely exceed the maximum line length enforced by the style guide!");
     }
-
     public static String greet() {
         return "Hello Test!";
     }
