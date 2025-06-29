@@ -4,5 +4,19 @@ jobs:
     checkstyle-java:
         runs-on: ubuntu-latest
         steps:
-            - name: Test
-              run: echo "Downloading java..."
+            - name: checkout repo
+              uses: actions/checkout@v4
+            - name: setup java
+              uses: actions/setup-java@v4
+              with:
+                distribution: 'temurin'
+                java-version: '21'
+            - name: check java installation and version
+              run:  |
+                    java --version
+                    echo "JAVA_HOME is $JAVA_HOME"
+            - name: navigate to project folder and run the google checks linter
+              run:  |
+                    cd ./github-actions-exercises
+                    wget https://github.com/checkstyle/checkstyle/releases/download/checkstyle-10.12.4/checkstyle-10.12.4-all.jar -O checkstyle.jar
+                    java -jar checkstyle.jar -c google_checks.cml src
