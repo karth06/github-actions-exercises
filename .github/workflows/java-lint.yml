@@ -36,4 +36,4 @@ jobs:
                    mvn -v
             - name: run maven build and tests
               run: |
-                   mvn clean install
+                   mvn test
