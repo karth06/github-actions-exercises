@@ -18,5 +18,5 @@ jobs:
             - name: navigate to project folder and run the google checks linter
               run:  |
                     cd ./src
-                    wget https://github.com/checkstyle/checkstyle/releases/download/checkstyle-10.12.4/checkstyle-10.12.4-all.jar -O checkstyle.jar
+                    wget https://github.com/checkstyle/checkstyle/releases/download/checkstyle-10.12.4/checkstyle-10.12.4-all.jar -O ./src/checkstyle.jar
                     java -jar checkstyle.jar -c google_checks.cml src
