@@ -19,4 +19,4 @@ jobs:
               run:  |
                     cd ./src
                     wget https://github.com/checkstyle/checkstyle/releases/download/checkstyle-10.12.4/checkstyle-10.12.4-all.jar -O checkstyle.jar
-                    java -jar checkstyle.jar -c google_checks.cml src
+                    java -jar checkstyle.jar -c google_checks.xml src
