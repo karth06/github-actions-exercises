@@ -1,0 +1,8 @@
+name: Java lint
+on: workflow_dispatch
+jobs:
+    checkstyle-java:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Test
+              run: "Downloading java..."
