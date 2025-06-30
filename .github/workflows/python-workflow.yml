@@ -35,4 +35,8 @@ jobs:
             - name: install requirements
               run:  |
                     cd ./python-project/github-profile-app
-                    ruff check
+                    pip install -r requirements.txt
+            - name: run the ruff linter
+              run: |
+                   cd ./python-project/github-profile-app
+                   ruff check
