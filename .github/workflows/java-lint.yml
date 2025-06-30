@@ -19,7 +19,7 @@ jobs:
               run:  |
                     wget https://github.com/checkstyle/checkstyle/releases/download/checkstyle-10.12.4/checkstyle-10.12.4-all.jar -O checkstyle.jar
                     wget https://raw.githubusercontent.com/checkstyle/checkstyle/checkstyle-10.12.4/src/main/resources/google_checks.xml -O google_checks.xml
-                    java -jar checkstyle.jar -c google_checks.xml -f plain -o checkstyle-report.txt src
+                    java -jar checkstyle.jar -c google_checks.xml -f plain -o checkstyle-report.txt ./java-project/src
                     cat checkstyle-report.txt
     run-tests:
         runs-on: ubuntu-latest
