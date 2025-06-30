@@ -14,6 +14,7 @@ jobs:
                     python github_profile.py
     run-tests:
         runs-on: ubuntu-latest
+        needs:  inital-setup
         steps:
             - name: checkout the code
               uses: actions/checkout@v4
@@ -25,3 +26,13 @@ jobs:
               run:  |
                     cd ./python-project/github-profile-app
                     pytest
+    run-linter:
+        runs-on: ubuntu-latest
+        needs: run-tests
+        steps:
+            - name: checkout the code
+              uses: actions/checkout@v4
+            - name: install requirements
+              run:  |
+                    cd ./python-project/github-profile-app
+                    ruff check
