@@ -1,0 +1,8 @@
+name: Test Python workflow
+on: push
+jobs:
+    inital-setup:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "test setup"
+              run: echo "Hello"
