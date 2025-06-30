@@ -10,4 +10,5 @@ jobs:
               uses: actions/checkout@v4
             - name: run the github_profile.py file
               run:  |
-                    cd ./python-project/github-profile-app/github_profile.py
+                    cd ./python-project/github-profile-app
+                    python github_profile.py
