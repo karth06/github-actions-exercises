@@ -12,3 +12,16 @@ jobs:
               run:  |
                     cd ./python-project/github-profile-app
                     python github_profile.py
+    run-tests:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout the code
+              uses: actions/checkout@v4
+            - name: install requirements
+              run:  |
+                    cd ./python-project/github-profile-app
+                    pip install -r requirements.txt
+            - name: run tests
+              run:  |
+                    cd ./python-project/github-profile-app
+                    pytest
