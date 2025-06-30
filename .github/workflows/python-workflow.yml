@@ -4,5 +4,10 @@ jobs:
     inital-setup:
         runs-on: ubuntu-latest
         steps:
-            - name: "check python installation"
+            - name: check python installation
               run: python --version
+            - name: checkout the code
+              uses: actions/checkout@v4
+            - name: run the github_profile.py file
+              run:  |
+                    cd ./python-project/github-profile-app/github_profile.py
