@@ -2,7 +2,8 @@ name: Test Python workflow
 on:
     pull_request:
         types:
-            opened
+            - opened
+            - assigned
         branches:
             - main
 jobs:
