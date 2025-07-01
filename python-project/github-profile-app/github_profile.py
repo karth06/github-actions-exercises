@@ -2,10 +2,6 @@ import requests
 
 
 def get_profile_info(username: str) -> str:
-    a=""
-    if True:
-        print("this executes anyways")
-    
     url = f"https://api.github.com/users/{username}"
     try:
         response = requests.get(url)
