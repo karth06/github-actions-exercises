@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - ./github/workflows/java-lint.yml
+      - ./github/workflows/python-workflow.yml
 jobs:
   test:
     runs-on: ubuntu-latest
