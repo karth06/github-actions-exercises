@@ -1,5 +1,5 @@
 name: Testing passing data between jobs
-on: push
+on: [push]
 jobs:
     job1:
        runs-on: ubuntu:latest
