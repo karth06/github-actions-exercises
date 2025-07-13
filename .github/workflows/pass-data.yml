@@ -24,4 +24,5 @@ jobs:
     needs: job1
     steps:
       - name:   Print Java version
-        run:    echo "Java version from Job 1: ${{ needs.job1.outputs.java-ver }}"
+        run:    |
+                echo "Java version from Job 1: ${{ needs.job1.outputs.java-ver }}"
