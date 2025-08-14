@@ -1,0 +1,14 @@
+# Build artifacts
+java-project/target/
+npm-project/node_modules/
+npm-project/dist/
+python-project/**/__pycache__/
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
